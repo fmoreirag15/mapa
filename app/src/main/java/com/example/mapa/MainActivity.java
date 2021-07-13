@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements GoogleMap.OnMarke
         figuraSecundaria.color(R.color.design_default_color_primary);
         mapG.addPolyline(figuraSecundaria);
 
-        mapG.setInfoWindowAdapter(new MyInfoWindowAdapter(MainActivity.this));
+        mapG.setInfoWindowAdapter(new inf_marcador_adapter(MainActivity.this));
         mapG.setMapType(vista);
     }
     @Override

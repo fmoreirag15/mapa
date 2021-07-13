@@ -10,10 +10,10 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 import com.squareup.picasso.Picasso;
 
-public class    MyInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
+public class inf_marcador_adapter implements GoogleMap.InfoWindowAdapter {
 
     Context context;
-    public MyInfoWindowAdapter(Context context) {
+    public inf_marcador_adapter(Context context) {
         this.context=context;
     }
 
@@ -41,7 +41,7 @@ public class    MyInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
         imageView=infoView.findViewById(R.id.imageView2);
         String url= a[2].toString().replaceAll(" ","");
 
-        Picasso.get().load("https://res.cloudinary.com/durxpegdm/image/upload/v1625982278/logos/"+url+"").resize(100,100).centerCrop().into(imageView);
+        Picasso.get().load("https://res.cloudinary.com/durxpegdm/image/upload/v1625982278/logos/"+url+"").resize(200,200).centerCrop().into(imageView);
 
         return infoView;
     }
